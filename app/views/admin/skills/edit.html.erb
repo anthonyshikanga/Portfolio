@@ -1,1 +1,19 @@
-edit.html.erb
+<h3>Edit <%= @skill.name %></h3>
+
+<%= form_for @skill, url:
+admin_skill_path(@skill) do |f| %>
+
+  <div class= "form-group">
+   <label>Language</label>
+   <%= f.text_field :name, class: 'form-control' %>
+   </div>
+
+   <div class= "form-group">
+   <label>Competence</label>
+   <%= f.text_field :rating, class: 'form-control' %>
+   </div>
+
+   <div class="form-group">
+     <%= f.submit "Update Skill", class: 'btn btn-primary' %>
+     </div>
+     <% end %>

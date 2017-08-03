@@ -1,0 +1,18 @@
+<h1>Skills</h1>
+
+<% @skills.each do |skill| %>
+  <div class = "panel panel-default">
+    <div class = "panel-heading">
+      <h3 class ="panel-title"><%= skill.name %></h3>
+      </div>
+
+      <div class="panel-body">
+        <p><%= skill.rating %></p>
+        </div>
+
+        <div class="panel-footer">
+          <%= link_to "View more details", admin_skill_path(skill), class: "btn btn-default" %>
+           <%= link_to "Edit", edit_admin_skill_path(skill), class: "btn btn-default" %>
+          </div>
+          </div>
+          <% end %>

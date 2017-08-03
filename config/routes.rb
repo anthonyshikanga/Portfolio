@@ -5,7 +5,5 @@ root to: "home#index"
 resources :skills, only: [:index, :show]
 namespace :admin do
 	resources :skills
-
-
-
+end
 end

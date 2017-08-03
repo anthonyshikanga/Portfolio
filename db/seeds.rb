@@ -8,6 +8,7 @@
 
 User.create(
   email: 'anthonyshikanga@gmail.com',
-  password: 'c1b2d3t4a5'
+  password: 'c1b2d3t4a5',
+  is_admin: true
 
 	)

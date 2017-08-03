@@ -1,17 +1,8 @@
-<h1>Skills</h1>
+<div id="container"> 
+        </div> 
 
-<% @skills.each do |skill| %>
-  <div class = "panel panel-default">
-    <div class = "panel-heading">
-      <h3 class ="panel-title"><%= skill.name %></h3>
-      </div>
 
-      <div class="panel-body">
-        <p><%= skill.rating %></p>
-        </div>
+<h1>
+<a href="/skills">Skills</a>
+</h1>
 
-        <div class="panel-footer">
-          <%= link_to "View more details", skill_path, class: "btn btn-default" %>
-          </div>
-          </div>
-          <% end %>

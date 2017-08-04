@@ -1,2 +1,8 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ .container {
+    width: 780px;
+    background: #FFF;
+    margin: 0 auto;
+}

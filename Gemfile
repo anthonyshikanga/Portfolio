@@ -10,6 +10,12 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+group :development do
+  gem 'sqlite3'
+  end
+  group :development do
+    gem 'pg', '~> 0.18'
+  end
 gem 'rails', '~> 5.1.2'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'

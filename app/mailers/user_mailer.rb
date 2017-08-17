@@ -5,9 +5,9 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.signup_confirmation.subject
   #
-  def signup_confirmation
-    @greeting = "Hi"
-
-    mail to: "to@example.org", subject: "Sign Up Confirmaton" reply_to: "anthonyshikanga@gmail.com"
+  def signup_confirmation(user)
+    @user=user
+    
+    mail to: "user.email", subject: "Sign Up Confirmaton", reply_to: "anthonyshikanga@gmail.com"
   end
 end

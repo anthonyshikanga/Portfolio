@@ -8,5 +8,19 @@
         </div>
 </div>
           
-        
-<%= image_tag(@skill.image_url.to_s) %>
+ <p><%= link_to "Add a Project", new_skill_project_path(@skill) %></p>
+   
+<h1>Projects</h1>
+
+<% if @skill.projects.any? %>
+
+
+  <% @skill.projects.each do |project| %>
+  
+  	<div class = "panel-heading">
+      <h3 class ="panel-title"><%= project.name %></h3>
+      </div>
+      <% end %>
+
+     <% end %>
+

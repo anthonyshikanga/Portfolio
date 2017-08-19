@@ -50,10 +50,10 @@ class CommentsController < ApplicationController
 	end
 
 	def comment_params
-		post = {'post_id' :@post.id}
-		user = {'user_id' :@user.id}
+		post = {post_id:params[:post_id]}
+		user = {user_id:params[:user_id]}
 		params.require(:comment).permit(:comment,:post_id).merge(post).merge(user)
 		end
 	end
 
-	
+

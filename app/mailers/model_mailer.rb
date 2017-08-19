@@ -5,9 +5,9 @@ class ModelMailer < ApplicationMailer
   #
   #   en.model_mailer.new_user_notification.subject
   #
-  def new_user_notification
-    @greeting = "Hi"
-
-    mail to: "to@example.org"
+  def new_user_notification(user)
+    @user = user 
+    
+    mail to: @user.email, subject: "Welcome user"
   end
 end

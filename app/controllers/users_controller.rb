@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(params[:user])
 		if @user.save
-			UserMailer.signup_confirmation.deliver
+			ModelMailer.new_user_notification(@user).deliver
 			redirect_to @user, notice: "Signed up succesfully."
 		else
 			render :new

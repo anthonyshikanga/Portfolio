@@ -5,6 +5,12 @@ class ReferencesController < ApplicationController
   # GET /references.json
   def index
     @references = Reference.all
+    @reference = Reference.new
+
+  respond_to do |format|
+    format.html
+    format.json
+  end
   end
 
   # GET /references/1
@@ -29,6 +35,7 @@ class ReferencesController < ApplicationController
     respond_to do |format|
       if @reference.save
         format.html { redirect_to @reference, notice: 'Reference was successfully created.' }
+        format.js
         format.json { render :show, status: :created, location: @reference }
       else
         format.html { render :new }

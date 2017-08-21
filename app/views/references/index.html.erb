@@ -3,6 +3,7 @@
 <h1>Recommendations</h1>
 <br>
 <%= @references.each do |reference| %>
+<div id = "reference">
 <div class = "panel panel-default">
   <div class ="panel-heading">
     <h3 class ="panel-title"><%= reference.author %></h3>
@@ -16,7 +17,11 @@
    <%= link_to 'Destroy', reference, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
    </div>
 </div>
+</div>
 <% end %>
 
 <%= link_to 'New Reference', new_reference_path, remote: true, class: "btn btn-success" %>
+<div id="reference-modal" class="modal fade"></div>
+
+
        

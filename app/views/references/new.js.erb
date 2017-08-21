@@ -1,2 +1,2 @@
-$('#reference-form').html("<%= j (render 'form') %>");
-$('#reference-form').slideDown(350);
+ $('#new-reference').hide();
+ $('#reference-form').html('<%= j render "form", reference:@reference%>');

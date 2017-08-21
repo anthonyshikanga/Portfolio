@@ -1,14 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Author:</strong>
-  <%= @reference.author %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @reference.content %>
-</p>
-
-<%= link_to 'Edit', edit_reference_path(@reference) %> |
-<%= link_to 'Back', references_path %>
+<div class = "panel panel-default">
+  <div class ="panel-heading">
+    <h3 class ="panel-title"><%= @reference.author %></h3>
+  </div>
+  <div class="panel-body">
+    <%= @reference.content %>
+  </div>
+  <div class="panel-footer">
+   <%= link_to 'Edit', edit_reference_path(@reference), remote: true, class: "btn btn-success" %>
+   </div>
+</div>

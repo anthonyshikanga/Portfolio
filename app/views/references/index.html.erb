@@ -3,8 +3,8 @@
 <h1>Recommendations</h1>
 <br>
 
-<div id="reference-form" style="display:none;"></div>
-<%= link_to 'New Reference', new_reference_path, remote: true, class: "btn btn-success" %>
+<%= link_to 'New Reference', new_reference_path, remote: true, class: "btn btn-success", id:'new-reference' %>
+<div id="reference-form"></div>
 <div id="references"><%= render @references %></div>
 
 

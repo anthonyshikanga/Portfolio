@@ -1,29 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<h1>References</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Author</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @references.each do |reference| %>
-      <tr>
-        <td><%= reference.author %></td>
-        <td><%= reference.content %></td>
-        <td><%= link_to 'Show', reference %></td>
-        <td><%= link_to 'Edit', edit_reference_path(reference) %></td>
-        <td><%= link_to 'Destroy', reference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<h1>Recommendations</h1>
 <br>
+<%= @references.each do |reference| %>
+<div class = "panel panel-default">
+  <div class ="panel-heading">
+    <h3 class ="panel-title"><%= reference.author %></h3>
+  </div>
+  <div class="panel-body">
+    <%= reference.content %>
+  </div>
+  <div class="panel-footer">
+   <%= link_to 'View', reference, class: "btn btn-success" %>
+   <%= link_to 'Edit', edit_reference_path(reference), class: "btn btn-success" %>
+   <%= link_to 'Destroy', reference, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+   </div>
+</div>
+<% end %>
 
-<%= link_to 'New Reference', new_reference_path %>
+<%= link_to 'New Reference', new_reference_path, class:"btn btn-success" %>
+       

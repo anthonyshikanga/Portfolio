@@ -1,2 +1,2 @@
-$("#reference-modal").html("<%= escape_javascript(render 'new') %>")
-$("#reference-modal").modal("show")
+$('#reference-form').html("<%= j (render 'form') %>");
+$('#reference-form').slideDown(350);

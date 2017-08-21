@@ -2,27 +2,9 @@
 
 <h1>Recommendations</h1>
 <br>
-<%= @references.each do |reference| %>
-<div id = "reference">
-<div class = "panel panel-default">
-  <div class ="panel-heading">
-    <h3 class ="panel-title"><%= reference.author %></h3>
-  </div>
-  <div class="panel-body">
-    <%= reference.content %>
-  </div>
-  <div class="panel-footer">
-   <%= link_to 'View', reference, class: "btn btn-success" %>
-   <%= link_to 'Edit', edit_reference_path(reference), class: "btn btn-success" %>
-   <%= link_to 'Destroy', reference, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
-   </div>
-</div>
-</div>
-<% end %>
 
 <div id="reference-form" style="display:none;"></div>
 <%= link_to 'New Reference', new_reference_path, remote: true, class: "btn btn-success" %>
-<div id="reference-modal" class="modal fade"></div>
+<div id="references"><%= render @references %></div>
 
 
-       

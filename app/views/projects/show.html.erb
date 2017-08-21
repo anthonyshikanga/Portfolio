@@ -1,1 +1,6 @@
-show.html.erb
+<% @skill.projects.each do |project| %>
+  
+<%= project.name %>
+<%= project.picture %>
+
+<% end %>

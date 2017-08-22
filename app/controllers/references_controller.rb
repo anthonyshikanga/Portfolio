@@ -7,11 +7,7 @@ class ReferencesController < ApplicationController
     @references = Reference.all
     @reference = Reference.new
 
-  respond_to do |format|
-    format.html
-    format.json
-  end
-  end
+    end
 
   # GET /references/1
   # GET /references/1.json

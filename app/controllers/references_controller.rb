@@ -5,8 +5,7 @@ class ReferencesController < ApplicationController
   # GET /references.json
   def index
     @references = Reference.all
-    @reference = Reference.new
-
+    
     end
 
   # GET /references/1
@@ -21,6 +20,7 @@ class ReferencesController < ApplicationController
 
   # GET /references/1/edit
   def edit
+    @reference = Reference.find(params[:id])
   end
 
   # POST /references

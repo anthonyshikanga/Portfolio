@@ -8,6 +8,7 @@
     <%= @reference.content %>
   </div>
   <div class="panel-footer">
-   <%= link_to 'Edit', edit_reference_path(@reference), class: "btn btn-success" %>
+   <a ic-get-from="<%= edit_reference_path @reference%>" class="btn btn-success">Edit</a>
    </div>
 </div>
+

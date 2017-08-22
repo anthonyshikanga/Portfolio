@@ -2,7 +2,7 @@
 
 <h1>Recommendations</h1>
 <br>
-<%= link_to 'New Reference', new_reference_path, class: "btn btn-success", id:'new-reference' %>
+
 <div id="references">
 	<%= @references.each do |reference| %>
 <div id = "reference">
@@ -15,8 +15,9 @@
   </div>
   <div class="panel-footer">
    <%= link_to 'View', reference, class: "btn btn-success" %>
-   <%= link_to 'Edit', edit_reference_path(reference), class: "btn btn-success" %>
-   <%= link_to 'Destroy', reference, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+   
+
+      <%= link_to 'Destroy', reference, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
    </div>
 </div>
 </div>

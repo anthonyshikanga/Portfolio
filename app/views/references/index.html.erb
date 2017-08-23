@@ -2,7 +2,7 @@
 
 <h1>Recommendations</h1>
 <br>
- <%= link_to "New Reference", new_reference_path, class: "btn btn-success" %>
+ <%= link_to "New Reference", new_reference_path, class: "btn btn-success", id: "ref-button", remote: true %>
 <div id="ref">
 <%= render 'reference'%>
 </div>

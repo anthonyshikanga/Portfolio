@@ -5,7 +5,7 @@ class ReferencesController < ApplicationController
   # GET /references.json
   def index
     @references = Reference.all
-    
+    render :layout => params['ic-request'].blank?
     end
 
   # GET /references/1
@@ -21,6 +21,7 @@ class ReferencesController < ApplicationController
   # GET /references/1/edit
   def edit
     @reference = Reference.find(params[:id])
+    render :layout => params['ic-request'].blank?
   end
 
   # POST /references
@@ -45,11 +46,11 @@ class ReferencesController < ApplicationController
   def update
     respond_to do |format|
       if @reference.update(reference_params)
-        format.html { redirect_to @reference, notice: 'Reference was successfully updated.' }
-        format.json { render :show, status: :ok, location: @reference }
+        flash[:notice] = "Updated Contact"
+        render action: :show, :layout => params['ic-request'].blank?
       else
-        format.html { render :edit }
-        format.json { render json: @reference.errors, status: :unprocessable_entity }
+        flash[:error] = 'Could not update contact'
+        render action: :edit, :layout => params['ic-request'].blank?
       end
     end
   end

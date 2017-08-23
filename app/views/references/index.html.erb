@@ -2,26 +2,7 @@
 
 <h1>Recommendations</h1>
 <br>
-
-<div id="references">
-	<%= @references.each do |reference| %>
-<div id = "reference">
-<div class = "panel panel-default">
-  <div class ="panel-heading">
-    <h3 class ="panel-title"><%= reference.author %></h3>
-  </div>
-  <div class="panel-body">
-    <%= reference.content %>
-  </div>
-  <div class="panel-footer">
-   <%= link_to 'View', reference, class: "btn btn-success" %>
-   
-
-      <%= link_to 'Destroy', reference, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
-   </div>
+<button id="ref-button" class = "btn btn-success">Reference</button>
+<div id="ref" style="display:none">
+<%= render 'reference'%>
 </div>
-</div>
-<% end %>
-
-</div>
-

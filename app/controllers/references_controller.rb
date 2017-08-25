@@ -4,7 +4,7 @@ class ReferencesController < ApplicationController
   # GET /references
   # GET /references.json
   def index
-    @references = Reference.all
+    @references = Reference.all.page params[:page]
     render :layout => params['ic-request'].blank?
     end
 

@@ -2,7 +2,13 @@ class CommentsController < ApplicationController
 	before_action :check_user, only: [:new,:create,:edit,:update,:delete]
 
 	def new
-		@comment = Comment.new
+		@comment = Comment.new(comment_params)
+		if @comment.save
+			flash[:notice] = "Comment added succesfully"
+			redirect_to post_path(@post)
+		else
+			render :new
+		end
 	end
 
 	def create

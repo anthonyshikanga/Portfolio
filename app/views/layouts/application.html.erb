@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio</title>
     <%= csrf_meta_tags %>
 
@@ -19,13 +20,13 @@
     
   </head>
 
-  <body>
+  <body style="color: #222;">
     <%= render 'nav' %>
-    <div id="content-div">
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+    
+ <!--  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p> -->
     <%= yield %>
-    </div>
+    
     <%= render 'footer' %>
   </body>
 </html>

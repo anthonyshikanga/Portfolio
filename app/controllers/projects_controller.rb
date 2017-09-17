@@ -24,7 +24,7 @@ class ProjectsController < ApplicationController
 	private
 	def project_params
 		skill = {skill_id:params[:skill_id]}
-		params.require(:project).permit(:name, :skill_id, :picture).merge(skill)
+		params.require(:project).permit(:name, :skill_id, :link).merge(skill)
 	end
 	def get_user
 		@user = current_user

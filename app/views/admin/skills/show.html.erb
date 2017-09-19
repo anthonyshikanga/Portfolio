@@ -11,6 +11,19 @@
 <%= @skill.image %>
 
 <h1>Projects</h1>
+<% if @skill.projects.any? %>
+
+
+  <% @skill.projects.each do |project| %>
+  <a href="<%=project.link%>"><%= project.name %></a> </br>
+  	<!-- <div class = "panel-heading">
+      <h3 class ="panel-title"><%= project.name %></h3>
+      <%= project.picture %>
+ -->
+      </div>
+      <% end %>
+
+     <% end %>
 
 
 

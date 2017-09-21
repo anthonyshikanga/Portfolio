@@ -307,7 +307,7 @@ section {
 .main-slider .slider-bg-position {
   background-size: cover!important;
   background-position: center center!important;
-  
+  background: #212121 url("https://farm9.staticflickr.com/8007/29367662245_13b560c2c6_h.jpg") top left;
 }
 .main-slider .swiper-button-prev, .main-slider .swiper-button-next {
   background-image: none!important;
@@ -549,11 +549,10 @@ header.masthead {
 #bg {
     background: #212121 url("https://farm9.staticflickr.com/8007/29367662245_13b560c2c6_h.jpg") top left;
     background-repeat: repeat-x;
-    height: 100%;
-    left: 0;
+    height: 100vh;  
     opacity: 1;
 /*  Change postition to Fixed to lock the background for the whole document  */
-    position: absolute;
+  
     top: 0;
     width: 100%;
   }
@@ -606,10 +605,6 @@ header.masthead {
     text-align: center;
 }
 
-.backg{
-  background: url('http://www.whizjuniors.com/Content/img/banner.jpg') no-repeat center center;
-
-}
 
 
 /* Center Image (Profile Image) */

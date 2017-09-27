@@ -378,10 +378,20 @@ section {
   margin-top: 30px;
 }
 
+
+.new {
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    position: relative;
+   
+}
+
+
+
 /* ABOUT SECTION
 -------------------------------------------------- */
 .about-sec {
-  background: url('http://cdn.pcwallart.com/images/cool-backgrounds-hd-gaming-wallpaper-1.jpg') no-repeat center center;
   background-size: cover;
   color: #fff;
   position: relative;
@@ -391,29 +401,24 @@ section {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(22,122,192,0.8);
+  background: #fff;
   top: 0;
   left: 0
 }
-.about-sec h2 {
-  font-size: 55px;
-  font-weight: 800;
-  margin-top: 25%;
-}
-.about-sec h2 small {
-  display: block;
-  font-size: 24px;
-  margin-bottom: 15px;
-  padding-left: 10px;
+
+.about-sec h1 {
+color:black;
 }
 .about-sec p {
-  font-size: 16px;
+  font-size: 20px;
+  font-family: 'Lato', sans-serif; 
+  color: black;
 }
 
 
 .action-sec{width:100%; float:left; background:#222}
-.action-box{float:left; width:100%; text-align:center;}
-.action-box h2{color:#fff; font-size:20px;}
+.action-box{float:left; width:100%;}
+.action-box h2{color:black; font-size:20px;}
 /**
  * Swiper 3.4.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
